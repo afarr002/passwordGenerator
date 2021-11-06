@@ -1,5 +1,7 @@
 //variable delarations
 
+var generateBtn = document.querySelector("#generate");
+
 var passLength = 0;
 var lowerCaseOptions = "abcdefghijklmnopqrstuvwxyz";
 var lowerCase = lowerCaseOptions.split("");
@@ -23,6 +25,7 @@ function userInput() {
   if (passLength < 8 || passLength > 128) {
     alert("Error" + "\n" + "Please choose a number between 8-128.");
     userInput();
+    return;
   }
   //prompt user for character selections (lowercase, uppercase, numeric, special characters)
   userLowerCase = confirm(
@@ -44,6 +47,7 @@ function userInput() {
   ) {
     alert("Error!!" + "\n" + "You must select at least one option!");
     userInput();
+    return;
   }
 }
 
@@ -82,7 +86,6 @@ function generatePassword() {
 //once generated, password must be displayed on the screen
 
 // stores a reference to the generate button
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 
