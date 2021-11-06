@@ -23,7 +23,6 @@ function userInput() {
   if (passLength < 8 || passLength > 128) {
     alert("Error" + "\n" + "Please choose a number between 8-128.");
     userInput();
-    return;
   }
   //prompt user for character selections (lowercase, uppercase, numeric, special characters)
   userLowerCase = confirm(
@@ -38,14 +37,13 @@ function userInput() {
   );
   //error handling - did the user select at least one option?
   if (
-    lowerCase === false &&
-    upperCase === false &&
-    numbers === false &&
-    specialCharacters === false
+    userLowerCase === false &&
+    userUpperCase === false &&
+    userNumbers === false &&
+    userSpecialCharacters === false
   ) {
     alert("Error!!" + "\n" + "You must select at least one option!");
     userInput();
-    return;
   }
 }
 
