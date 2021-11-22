@@ -6,6 +6,10 @@ This is a password generator that has the functionality to customize passwords b
 User can select a password length between 8 - 124 characters.
 User can select any or all of UPPERCASE, lowercase, numbers, or special characters (!@#$%^&\*).
 
+## Tech Used
+
+This page was built using HTML, CSS, and JavaScript.
+
 ## Application Link
 
 The link to the deloyed site is - https://afarr002.github.io/passwordGenerator/
